@@ -1,0 +1,54 @@
+
+<!-- Login form -->
+<div id="content">
+  <div class="container"> 
+    <!-- main page -->     
+    <p>There are so many blogs and sites publishing high quality 
+    CSS and JavaScript tutorials these days that it can be hard 
+    to keep track - and it's easy to miss an amazing tutorial completely. 
+    And sod's law dictates that the one you do miss will be the 
+    one that could have saved you days of work on your latest project...</p>   
+
+    <!-- SEARCH BUTTON -->	   
+
+    <section class="main">
+      <form class="search" method="post" action="/main" >
+        <select data-placeholder="Choose a country..." style="width:350px;" class="chosen-select" name="q" id="choose_course">
+          <% ForSearch.all.each do |course| %>
+            <option value="<%= course.id %>"><%= course.name %></option>
+          <% end %>
+        </select>
+        </ul>
+      </form>
+    </section>
+  </div>
+</div>
+
+<!-- SEARCH BUTTON -->	 
+
+
+<div id="div1">
+
+
+  <div class="dropdown" style="display:none" id="type_job">
+    <button class="btn btn-info" type="button" id="dropdownMenu1" data-toggle="dropdown">
+      Drop Down 1
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    </ul>
+  </div>
+</div>
+
+
+
+<div id="div2">		
+
+  <div class="dropdown" style="display:none" id="type_studies">
+    <button class="btn btn-info" type="button" id="dropdownMenu1" data-toggle="dropdown">
+      Drop Down 1
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    </ul>
+  </div>
+</div>
+

@@ -1,0 +1,53 @@
+<div id="content">
+  <div class="container">
+    <div class="row"> 
+      <!-- sidebar -->
+      <div class="span3 sidebar">
+        <div class="section-menu">
+          <ul class="nav nav-list">
+            <li class="nav-header">In This Section</li>
+            <li><a href="/about" class="first">About Us <small>How It All Began</small><i class="icon-angle-right"></i></a></li>
+            <li><a href="/team">The Team <small>Our team of stars</small><i class="icon-angle-right"></i></a></li>
+            <li class="active"><a href="/contact">Contact Us<small>How to get in touch</small><i class="icon-angle-right"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!--main content-->
+      <div class="span9">
+        <h2 class="title-divider"><span>Contact <span class="de-em">Us</span></span> <small>Ways To Get In Touch</small></h2>
+        <div class="row-fluid">
+          <div class="span6">
+            <form id="contact-form" action="#" />
+              <input type="text" class="span11" placeholder="Name" />
+              <br />
+              <input type="email" class="span11" placeholder="Email" />
+              <br />
+              <textarea rows="12" class="span11" placeholder="Message"></textarea>
+              <br />
+              <input type="button" class="btn btn-primary" value="Send Message" />
+            </form>
+          </div>
+          <div class="span6">
+            <p><abbr title="Phone"><i class="icon-phone"></i></abbr> 98765 43212</p>
+            <p><abbr title="Email"><i class="icon-envelope"></i></abbr> admin@whatcanidonext.org</p>
+            <p><abbr title="Address"><i class="icon-home"></i></abbr> India,Tamilnadu,Chennai. </p>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content-below" class="wrapper">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="upsell"> 
+
+  <%= render partial: 'application/subscribe'%>
+
+	  </div>
+    </div>
+  </div>
+</div>
+<%= render partial: 'layouts/footer'%>

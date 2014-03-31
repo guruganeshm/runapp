@@ -1,0 +1,29 @@
+<h1>Listing designation_type_designations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation type</th>
+      <th>Designation</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @designation_type_designations.each do |designation_type_designation| %>
+      <tr>
+        <td><%= designation_type_designation.designation_type_id %></td>
+        <td><%= designation_type_designation.designation_id %></td>
+        <td><%= link_to 'Show', designation_type_designation %></td>
+        <td><%= link_to 'Edit', edit_designation_type_designation_path(designation_type_designation) %></td>
+        <td><%= link_to 'Destroy', designation_type_designation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Designation type designation', new_designation_type_designation_path %>

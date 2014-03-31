@@ -1,0 +1,25 @@
+<%= form_for(@designation_type_designation) do |f| %>
+  <% if @designation_type_designation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@designation_type_designation.errors.count, "error") %> prohibited this designation_type_designation from being saved:</h2>
+
+      <ul>
+      <% @designation_type_designation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :designation_type_id %><br>
+    <%= f.number_field :designation_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :designation_id %><br>
+    <%= f.number_field :designation_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

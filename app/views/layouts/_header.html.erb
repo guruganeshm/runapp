@@ -1,0 +1,88 @@
+<div id="navigation" class="wrapper">
+  <div class="navbar  navbar-static-top"> 
+    
+
+    
+    <!--Header & Branding region-->
+    <div class="header">
+      <div class="header-inner container">
+        <div class="row-fluid">
+          <div class="span6"> 
+            <!--branding/logo--> 
+            <a class="brand" href="/home" title="Home">
+           <img src="img/url.png"/>
+            </a>
+          
+          </div>
+          
+          <!--header rightside-->
+          <div class="span6">
+           
+            <!--social media icons-->
+            <div class="social-media pull-right"> 
+              <!--@todo: replace with company social media details--> 
+              <a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-facebook"></i></a> <a href="#"><i class="icon-google-plus"></i></a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="navbar-inner"> 
+        
+        <!--mobile collapse menu button--> 
+        <a class="btn btn-navbar pull-left" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+        
+        <!--user menu-->
+        <ul class="nav user-menu pull-right">
+          <% unless session[:signed_in]==true %>
+        
+          <li><a href="/signup" class="btn btn-primary signup">Sign Up</a></li>
+          <li class="dropdown"> <a href="login" class="btn btn-primary dropdown-toggle login" id="login-drop" data-toggle="dropdown">Login</a>
+            <div class="dropdown-menu" role="menu" aria-labelledby="login-drop">
+              <form action="/sign_in" method = "post" class="form-inline" id="login-form-drop" role="menuitem" />
+                <div class="input-append">
+                  <input name ="email" type="email" class="input-small email" placeholder="Email" required />
+                  <input name ="password" type="password" class="input-small password" placeholder="Password" required/>
+                  <input type="submit" class="btn btn-primary login" value="Login" />
+                </div>
+              </form>
+              <span class="divider" role="menuitem"></span> <small role="menuitem">Not a member? <a href="signup" class="signup">Sign up now!</a></small> <small role="menuitem"><a href="#">Forgotten password?</a></small> </div>
+          </li>
+            <% else %>
+              <li><a href="" class="menu-item"><strong><%= session[:email]%></strong></a></li>
+             <li><a href="/logout" class="btn btn-primary signup">Logout</a></li>
+<% end %>
+             </ul>
+
+          
+        
+        <!--everything within this div is collapsed on mobile-->
+        <div class="nav-collapse collapse"> 
+          
+          <!--main navigation-->
+          <ul class="nav" id="main-menu">
+            <li class="home-link"><a href="/home"><i class="icon-home hidden-phone"></i><span class="visible-phone">Home</span></a></li>
+   
+            
+            <li class="dropdown"> <a href="/about" class="dropdown-toggle" id="about-drop" data-toggle="dropdown">About +</a> 
+              <!-- Dropdown Menu -->
+              <ul class="dropdown-menu" role="menu" aria-labelledby="about-drop">
+                <li role="menuitem"><a href="/about" tabindex="-1" class="menu-item">About Us</a></li>
+                <li role="menuitem"><a href="/team." tabindex="-1" class="menu-item">Our Team</a></li>
+                <li role="menuitem"><a href="/contact." tabindex="-1" class="menu-item">Contact</a></li>
+              </ul>
+            </li>
+                 
+                 <% unless session[:signed_in]==true %>
+
+                 <% else %>
+         		     <li><a href="/main" class="menu-item">Main</a></li>  
+                <% end %>
+          
+          </ul>
+        </div>
+        <!--/.nav-collapse --> 
+      </div>
+    </div>
+  </div>
+</div>

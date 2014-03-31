@@ -1,0 +1,208 @@
+<script src="js/jquery.js"></script> 
+   	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/jquery.easypiechart.min.js"></script>
+	
+	<script>
+	$(function() {
+		$('.chart').easyPieChart({
+			easing: 'easeOutBounce',
+			onStep: function(from, to, percent) {
+				$(this.el).find('.percent').text(Math.round(percent));
+			}
+		});
+		var chart = window.chart = $('.chart').data('easyPieChart');
+		$('.js_update').on('click', function() {
+			chart.update(Math.random()*20-10);
+		});
+	});
+	  </script>
+
+
+<div class="hero" id="highlighted">
+  <div class="inner"> 
+  
+  
+  
+   
+    <!--Flexslider Showshow-->
+    <section class="flexslider-wrapper container">
+      <div class="flexslider" data-slidernav="auto" data-transition="slide"> 
+        <!--The Slides-->
+        <div class="slides"> 
+          
+          <!--Slide #1 with caption-->
+          <div class="slide row-fluid">
+     <img src="img/new3.jpg" alt="Slide 1" />
+	
+			
+			</div>
+           
+       
+          
+          <!--Slide #2 straight image 1170px wide x 390px high-->
+     
+          <!--Slide #3 & so on below--> 
+		  
+  
+			 
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+ 
+
+ 
+
+
+<div id="content">
+  <div class="container"> 
+ 
+    <!-- Services -->
+
+
+	<h2 class="title-divider"><span>Why Are You<span class="de-em"> Here</span></span><small></small></h2>
+
+    <div class="row"> 
+      <!--Content Area--><blockquote>
+      <div class="span9">
+
+
+   
+<blockquote><p>
+Have you decided which career you will opt for after 10th,12th, Engg or Diploma? If you are confused, just relax!
+
+
+ We are here to give you with various career options and opportunity you can go for. </p></blockquote>
+
+	  
+	  
+	  </div>
+      
+      <!--Sidebar-->
+
+      <div class="span3 sidebar sidebar-right">
+        
+		
+		
+
+
+   <div class="alert alert-info">
+   <center>
+          <h5></h5>
+		  
+	 Explore your options and choices on right way.
+</br></br>
+   <button <a href="/about" type="button"  <a href="/signup" class="btn btn-Default btn-success">Get Started Now!!</a></button>   <center>
+
+		  </div> 	  
+		  
+      </div>
+    </div>      
+	
+	
+	
+	
+<hr>
+
+
+
+	 <!-- Plan features -->
+     
+    <!--Pricing Table-->
+    <div class="block">
+      <h2 class="title-divider"><span>Statistics on <span class="de-em">Indian Higher Education</span></span> <small></small></h2>
+
+     
+    <p>
+	  Student continue to be sorted into two tiers--engineering and three-year degrees of Arts, Science and Commerce. 
+Every sixth student in India is enrolled in engineering/technology program and more than 2/3rd of Indian students are enrolled in three-year undergraduate degrees.
+</p>
+	    <!--@EXAMPLE: Content Region With Left Sidebar-->
+
+    <div class="row"> 
+   
+
+    
+      <!--Content Area-->
+      <div class="span9">
+
+
+
+		   <div id="chart">
+        <div class="chart" data-percent="37">
+		<div class="percent" data-percent="" style="width: 110px; height: 110px; line-height: 110px;">
+		<canvas height="110" width="110"></canvas>
+        </div>
+        <div class="label">Arts</div>
+        </div>
+&nbsp;&nbsp;&nbsp;&nbsp;
+		<div class="chart" data-percent="19">
+		<div class="percent" data-percent="55" style="width: 110px; height: 110px; line-height: 110px;">
+		<canvas height="110" width="110"></canvas>
+		</div>
+		<div class="label label">Sicence</div>
+		</div>
+&nbsp;&nbsp;&nbsp;&nbsp;
+		<div class="chart" data-percent="18">
+		<div class="percent" data-percent="21" style="width: 110px; height: 110px; line-height: 110px;">
+		<canvas height="110" width="110"></canvas>
+		</div>
+		<div class="label">Commerce</div>
+		</div>
+&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="chart" data-percent="16">
+		<div class="percent" data-percent="55" style="width: 110px; height: 110px; line-height: 110px;">
+		<canvas height="110" width="110"></canvas>
+        </div>
+  <div class="label">Engg & Technology</div>
+       </div>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="chart" data-percent="4">
+		<div class="percent" data-percent="55" style="width: 110px; height: 110px; line-height: 110px;">
+		<canvas height="110" width="110"></canvas>
+        </div>
+  <div class="label">Education</div>
+       </div>
+		
+		
+
+ </div>
+	
+	  </div>
+
+	  <!--Sidebar-->
+      <div class="span3 sidebar sidebar-right">
+        <div class="inner">
+		
+
+<div class="label">Medicine (4%)</div><br/>
+<div class="label">Law (2%)</div><br/>
+<div class="label">Others (1%)</div>	<br/>
+<div class="label">Agriculture (0%)</div><br/>
+<div class="label">Veterinary Science (0%)</div>
+
+            
+		
+		</div>
+      </div>
+  </div>
+    <!--@EXAMPLE: Content Region With Left Sidebar-->
+	
+	
+
+			
+			
+    
+</div>
+
+
+<hr>
+    
+</div>
+</div>
+<%= render partial: 'layouts/footer'%>
+

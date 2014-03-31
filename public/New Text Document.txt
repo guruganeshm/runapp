@@ -1,0 +1,7 @@
+  <h3>Find What you can do next </h3>
+              <p>We help you to provide an in-depth look at a range of courses, and their role.
+          Explore your desired career in precise manner!
+
+			</p> 
+              <a href="#" class="btn btn-primary">Start Now</a>
+  

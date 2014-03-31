@@ -1,0 +1,2 @@
+module DesignationTypeDesignationsHelper
+end
