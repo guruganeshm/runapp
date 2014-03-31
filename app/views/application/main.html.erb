@@ -13,7 +13,7 @@
 
     <section class="main">
       <form class="search" method="post" action="/main" >
-        <select data-placeholder="Choose a country..." style="width:350px;" class="chosen-select" name="q" id="choose_course">
+        <select data-placeholder="start exploring" style="width:350px;" class="chosen-select" name="q" id="choose_course">
           <% ForSearch.all.each do |course| %>
             <option value="<%= course.id %>"><%= course.name %></option>
           <% end %>
